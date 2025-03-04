@@ -11,11 +11,17 @@ import UIKit
 class ResultsViewController: UIViewController {
     
     var bmiValue: String?
+    var color: UIColor?
+    var advice: String?
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var bmiResult: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         bmiResult.text = bmiValue
+        adviceLabel.text = advice
+        backgroundImage.backgroundColor = color
     }
     
     @IBAction func recalcPressed(_ sender: Any) {
